@@ -21,3 +21,41 @@
 - 参考文献数据库的编写
 - 致谢与附录
 - 正文格式的设定
+
+### 摘要环境样式设定
+
+在`\begin{abstract}`之上加入设置页眉、页脚的代码，在之下加入代码设置字号与行距，并且在摘要内容结束后加入命令填写关键词：
+
+```latex
+\fancyhf{}
+\fancyfoot[C]{\zihao{-5}\tnr\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\pagenumbering{Roman}
+\begin{abstract}
+    \zihao{-4}
+    \setlength{\baselineskip}{20pt}
+    摘要内容...
+
+    \vspace{\baselineskip}\bfseries\heiti 关键词：
+    \normalfont\heiti 关键词1；关键词2；...
+\end{abstract}
+```
+
+英文摘要环境如下，在开始摘要之前需要修改摘要名并另起一页：
+
+```latex
+\newpage
+\ctexset{abstractname=\zihao{3}\tnr\bfseries\centering Abstract\vspace{.75\baselineskip}}
+\begin{abstract}
+    \zihao{-4}
+    \tnr
+    \setlength{\baselineskip}{20pt}
+    the contends of english abstract ...
+
+    \vspace{\baselineskip}\zihao{-4}\tnr\bfseries Keywords:
+    \zihao{-4}\tnr\normalfont keyword1; ketword2; ...
+\end{abstract}
+```
+
+> 为什么不使用`titlepage`是摘要自动占1页？\
+> 因为使用了`titlepage`之后摘要就不顶格了
