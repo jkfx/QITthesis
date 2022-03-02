@@ -18,9 +18,9 @@
 
 - 摘要环境的样式设定
 - 页眉（需要手动填写自己的论文题目）
-- 参考文献数据库的编写
+- 正文格式的样式设定
+- 参考文献数据库编写与样式设定
 - 致谢与附录
-- 正文格式的设定
 
 ### 摘要环境样式设定
 
@@ -57,5 +57,76 @@
 \end{abstract}
 ```
 
-> 为什么不使用`titlepage`是摘要自动占1页？\
-> 因为使用了`titlepage`之后摘要就不顶格了
+> 为什么不使用`titlepage`使摘要独占1页？\
+> 因为使用了`titlepage`之后摘要就不顶格了，使得摘要标题开头在页面中间位置
+
+### 页眉页脚样式设定
+
+由于模板规范为摘要、英文摘要、目录无页眉并且页脚页码为大写罗马字体，之后的正文才加上页眉标题、将页脚页码改为阿拉伯数字格式，所以在第一章节—即第一个`section`—下方需要编写代码并且将毕业论文题目修改成自己的题目：
+
+```latex
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.5pt}
+\fancyhead[C]{\zihao{-5}毕业论文（设计）题目}
+\fancyfoot[C]{\zihao{-5}\tnr\thepage}
+\pagenumbering{arabic}
+```
+
+### 正文格式的样式设定
+
+在摘要与目录之后，第一个`\section`一级标题之下加入如下代码，即可修改为模板所需的样式格式与页眉页脚：
+
+```latex
+\zihao{-4}
+\setlength{\baselineskip}{20pt}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.5pt}
+\fancyhead[C]{\zihao{-5}毕业论文（设计）题目}
+\fancyfoot[C]{\zihao{-5}\tnr\thepage}
+\pagenumbering{arabic}
+```
+
+### 参考文献数据库编写与样式设定
+
+在与源代码同一目录下创建名为`citation.bib`的参考文献数据库文件，将需要引用的参考文献以`BibTex`的格式放到`bib`文件中，在论文需要放置参考文献的位置插入如下代码（先修改了标题样式）：
+
+```latex
+\ctexset{
+    section={
+        numbering=false,
+        format=\zihao{3}\heiti\centering,
+        beforeskip=.7\baselineskip,
+        afterskip=.7\baselineskip,
+        fixskip=true,
+        break=\newpage
+    }
+}
+\printbibliography
+```
+
+### 致谢与附录
+
+在上文的参考文献代码中，修改了一级标题的格式，所以在添加致谢与附录的时候只需要使用`\section`的一级标题即可：
+
+```latex
+\section{致\hspace{.5\ccwd}谢}
+
+致谢内容...
+```
+
+开启附录，需要在`\section`命令上分使用`\appendix`命令：
+
+```latex
+\appendix
+\section{}
+附录A的内容
+\section{}
+附录B的内容
+```
+
+## 使用样例
+
+在当前目录下有一个`example.tex`文档以及对应的`example.pdf`的文档，此文档基于模板文件中的内容所写的一个样例，可以查看[example.pdf]()文件查看效果。
+
+> 注意：\
+> 此LaTeX模板并没有编写`titlepage`标题页，所以仍需要在word中填写标题页的信息，将两个文件合并或在LaTeX中插入文档即可得到最终完整毕业论文。
