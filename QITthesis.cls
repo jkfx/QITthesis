@@ -9,6 +9,8 @@
 \RequirePackage{fontspec}
 % 页面设置宏包
 \RequirePackage{geometry}
+% 目录样式设置宏包
+\RequirePackage{titletoc}
 % 图、表题样式宏包
 % 设置图、表后面分隔符为空格
 % 设置图、表与其标题间距
@@ -57,6 +59,10 @@
 \renewcommand\thefigure{\thesection-\arabic{figure}}
 \renewcommand\thetable{\thesection-\arabic{table}}
 \renewcommand\theequation{\thesection-\arabic{equation}}
+% 设置目录样式
+\titlecontents{section}[0pt]{\zihao{4}}{\thecontentslabel\hspace{.5\ccwd}}{\thecontentslabel}{\zihao{-4}\titlerule*{.}\contentspage}
+\titlecontents{subsection}[1.5\ccwd]{\zihao{-4}}{\thecontentslabel\hspace{.5\ccwd}}{}{\zihao{-4}\titlerule*{.}\contentspage}
+\titlecontents{subsubsection}[2.5\ccwd]{\zihao{-4}}{\thecontentslabel\hspace{.5\ccwd}}{}{\zihao{-4}\titlerule*{.}\contentspage}
 % 正文标题样式设定
 \ctexset{
     punct=quanjiao,
@@ -94,8 +100,9 @@
     },
     appendix={
         numbering=true,
-        name={\heiti\zihao{3}\centering 附\hspace{.5\ccwd}录},
+        name={附\hspace{.5\ccwd}录},
         number=\Alph{section},
     },
-    bibname= {\vspace{.75\baselineskip}\zihao{3}\heiti\centering 参考文献}
+    bibname= {\vspace{.75\baselineskip}\zihao{3}\heiti\centering 参考文献},
+    contentsname=\zihao{3}\heiti\bfseries\centering 目\hspace{.5\ccwd}录
     }

@@ -28,6 +28,34 @@
     \zihao{-4}\tnr\normalfont sea cucumber; saponin; fatty liver; orotic acid; lipid bolism
 \end{abstract}
 
+\ctexset{
+    section={
+      numbering=false,
+      format=\zihao{3}\heiti\centering,
+      beforeskip=.7\baselineskip,
+      afterskip=.7\baselineskip,
+      fixskip=true,
+      break=\newpage
+     }
+}
+
+\tableofcontents
+
+\ctexset{
+    section={
+      numbering=true,
+      number=\arabic{section},
+      format=\raggedright\zihao{3},
+      numberformat=\tnr,
+      titleformat=\heiti,
+      aftername=\ ,
+      beforeskip=.7\baselineskip,
+      afterskip=.7\baselineskip,
+      fixskip=true,
+      break=\newpage
+     }
+}
+
 \section{前言}
 \zihao{-4}
 \setlength{\baselineskip}{20pt}
@@ -90,13 +118,13 @@
     \caption{动物饲料配比}
     \label{tab:t1}
     \begin{tabular}{ccccc}
-    \toprule
-    & 基础饲料(g/kg) & 玉米油(g/kg) & 乳清酸(g/kg) & 皂苷(g/kg) \\
-    \midrule
-    正常对照组 & 980 & 20 & / & / \\
-    模型对照组 & 970 & 20 & 10 & / \\
-    皂苷低剂量组 & 969.9 & 20 & 10 & 0.1 \\
-    \bottomrule
+        \toprule
+                     & 基础饲料(g/kg) & 玉米油(g/kg) & 乳清酸(g/kg) & 皂苷(g/kg) \\
+        \midrule
+        正常对照组   & 980            & 20           & /            & /          \\
+        模型对照组   & 970            & 20           & 10           & /          \\
+        皂苷低剂量组 & 969.9          & 20           & 10           & 0.1        \\
+        \bottomrule
     \end{tabular}
 \end{table}
 
@@ -126,16 +154,18 @@
 
 \ctexset{
     section={
-        numbering=false,
-        format=\zihao{3}\heiti\centering,
-        beforeskip=.7\baselineskip,
-        afterskip=.7\baselineskip,
-        fixskip=true,
-        break=\newpage
-    }
+      numbering=false,
+      format=\zihao{3}\heiti\centering,
+      beforeskip=.7\baselineskip,
+      afterskip=.7\baselineskip,
+      fixskip=true,
+      break=\newpage
+     }
 }
+
 \nocite{*}
 \printbibliography
+\addcontentsline{toc}{section}{参考文献}
 
 \section{致\hspace{.5\ccwd}谢}
 
@@ -151,6 +181,9 @@
 最后，我要感谢\dots\dots，正是他们的爱不断地激励和鼓舞我前进。
 
 \appendix
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\setcounter{equation}{0}
 
 \section{}
 
