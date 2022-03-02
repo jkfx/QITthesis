@@ -32,6 +32,9 @@
 \addbibresource{citation.bib}
 % 设置页眉、页脚
 \pagestyle{fancy}
+% 设置三线表线条的粗细
+\setlength{\heavyrulewidth}{1.5pt}
+\setlength{\lightrulewidth}{0.75pt}
 % 设置脚注格式为圆圈数字
 \RequirePackage{pifont}
 \makeatletter
