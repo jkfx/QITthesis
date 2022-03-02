@@ -11,6 +11,8 @@
 \RequirePackage{geometry}
 % 目录样式设置宏包
 \RequirePackage{titletoc}
+% 代码块的高亮
+\RequirePackage{listings}
 % 图、表题样式宏包
 % 设置图、表后面分隔符为空格
 % 设置图、表与其标题间距
