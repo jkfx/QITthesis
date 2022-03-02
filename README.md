@@ -130,3 +130,7 @@
 
 > 注意：\
 > 此LaTeX模板并没有编写`titlepage`标题页，所以仍需要在word中填写标题页的信息，将两个文件合并或在LaTeX中插入文档即可得到最终完整毕业论文。
+
+## 完善此模板
+
+如果你有LaTeX模板的编写经验，并且你希望和笔者一起完善更新这个项目，请联系我或者发起一个`Pull request`或者到[Discussions板块](https://github.com/jkfx/QITthesis/discussions)进行交流。
