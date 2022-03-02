@@ -126,7 +126,7 @@
 
 ## 使用样例
 
-在当前目录下有一个`example.tex`文档以及对应的`example.pdf`的文档，此文档基于模板文件中的内容所写的一个样例，可以查看[example.pdf]()文件查看效果。
+在当前目录下有一个`example.tex`文档以及对应的`example.pdf`的文档，此文档基于模板文件中的内容所写的一个样例，可以查看[example.pdf](https://github.com/jkfx/QITthesis/blob/master/example.pdf)文件查看效果。
 
 > 注意：\
 > 此LaTeX模板并没有编写`titlepage`标题页，所以仍需要在word中填写标题页的信息，将两个文件合并或在LaTeX中插入文档即可得到最终完整毕业论文。
