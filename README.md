@@ -134,6 +134,10 @@
 附录B的内容
 ```
 
+> 如果要求目录中的致谢和目录两字中间没有空格，而正文标题里需要有空格，就使用以下命令：  
+> `\section*{致\hspace{.5\ccwd}谢}`  
+> `\addcontentsline{toc}{section}{致谢}`
+
 ## 使用样例
 
 在当前目录下有一个`example.tex`文档以及对应的`example.pdf`的文档，此文档基于模板文件中的内容所写的一个样例，可以查看[example.pdf](https://github.com/jkfx/QITthesis/blob/master/example.pdf)文件查看效果。
