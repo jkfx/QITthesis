@@ -11,6 +11,8 @@
 \RequirePackage{geometry}
 % 目录样式设置宏包
 \RequirePackage{titletoc}
+% 子图、子标题宏包
+\RequirePackage{subcaption}
 % 代码块的高亮
 \RequirePackage{listings}
 % 图、表题样式宏包
